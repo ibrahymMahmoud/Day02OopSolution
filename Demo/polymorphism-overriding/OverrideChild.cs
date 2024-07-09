@@ -9,10 +9,14 @@ namespace Demo.polymorphism_overriding
     class OverrideChild : OverrideParent
     {
         public new void print()
+            //static binding 
+            //at compiletion time
         {
             Console.WriteLine("print from child (overried by new)");
         }
         public override void overriding()
+            //dynamic binding
+            //at runtime
         {
             Console.WriteLine("hello from child (overrided virtual)");
         }
