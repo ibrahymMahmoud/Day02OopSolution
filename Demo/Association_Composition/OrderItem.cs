@@ -13,7 +13,7 @@ namespace Demo.Association_Composition
         public decimal price { get; set; }
         public int quantity { get; set; }
 
-        public Order(Product product)
+        public void Order(Product product)
         {
             this.product = product;
         }

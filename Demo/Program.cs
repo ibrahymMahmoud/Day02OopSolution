@@ -2,6 +2,7 @@
 
 namespace Demo
 {
+   
     internal class Program
     {
         static void Main(string[] args)
@@ -77,21 +78,32 @@ namespace Demo
             #endregion
 
             #region inheritance
-            Child child1 = new Child(5, 10);
-            child1.Z = 20;
-            child1.ToString();
-            child1.PrintX();
+            /// Child child1 = new Child(5, 10);
+            /// child1.Z = 20;
+            /// child1.ToString();
+            /// child1.PrintX();
             #endregion
 
 
             #region PolyMorphism
-                /*
-                 * PolyMorphism (overloading , override)
-                 *   Poly->Many
-                 *   Morphism->forms
-                 */ 
+            /*
+             * PolyMorphism (overloading , override)
+             *   Poly->Many
+             *   Morphism->forms
+             */
 
             #endregion
+
+            #region Overloading
+          ///  Overloading sum = new Overloading();
+          ///  Console.WriteLine(sum.sum(5, 10));
+          ///  Console.WriteLine(sum.sum(5, 10, 100));
+          ///  Console.WriteLine(sum.sum(1, 2, 3, 4));
+          ///  Console.WriteLine(sum.sum(5.5, 4.5));  
+            #endregion
+
+
+
 
         }
     }

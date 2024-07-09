@@ -17,8 +17,7 @@ namespace Demo.inheritance
             set { z = value; }
         }
 
-        public int X { get; set; }
-        public int Y { get; set; }
+        
         public Child(int x , int y):base(x , y)
             // constructor chaining
         {
