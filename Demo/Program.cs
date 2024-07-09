@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using Demo.inheritance;
+
+namespace Demo
 {
     internal class Program
     {
@@ -73,6 +75,17 @@
             //the need for reference semantics,
             //and performance considerations.
             #endregion
+
+            #region inheritance
+            Child child1 = new Child(5, 10);
+            child1.Z = 20;
+            child1.ToString();
+            child1.PrintX(); 
+            #endregion
+
+
+
+
         }
     }
 }
