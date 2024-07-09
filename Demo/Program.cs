@@ -113,19 +113,36 @@ namespace Demo
             #region Binnding
             //binding is a behaviour
             //1. Reference from parent = object from child
-        ///    OverrideParent referance = new OverrideChild();
-        ///    referance.print(); // Print from parent
+            ///    OverrideParent referance = new OverrideChild();
+            ///    referance.print(); // Print from parent
             // -static binding [early binding]
             // compiler will bind function call based on reference Not object
             // al compilation time
 
-        ///    referance.overriding();//hello from child (overrided virtual)
+            ///    referance.overriding();//hello from child (overrided virtual)
             //- Dynamic binding [late binding]
             //clr will bind function call based on object Not reference 
             // at Runtime
 
 
             #endregion
+
+            #region Not binding
+
+          ///  OverrideParent parent = new OverrideChild ();   //binding
+          ///  OverrideChild child = new OverrideChild ();     // no binding
+          ///  child = (OverrideChild) parent; //casting operator override
+          ///  Console.WriteLine("***********Casting************");
+          ///  child.print();
+          ///  child.overriding();
+          ///  Console.WriteLine("***********binding************");
+          ///  parent.print();
+          ///  parent.overriding();
+              
+
+            #endregion
+
+
 
 
         }
