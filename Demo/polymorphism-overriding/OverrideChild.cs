@@ -10,11 +10,11 @@ namespace Demo.polymorphism_overriding
     {
         public new void print()
         {
-            Console.WriteLine("print from child");
+            Console.WriteLine("print from child (overried by new)");
         }
         public override void overriding()
         {
-            Console.WriteLine("hello from child");
+            Console.WriteLine("hello from child (overrided virtual)");
         }
 
         public override string ToString()
