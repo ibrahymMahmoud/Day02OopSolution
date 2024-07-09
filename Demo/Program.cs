@@ -1,11 +1,71 @@
 ﻿using Demo.inheritance;
 using Demo.polymorphism_overriding;
+using System.Xml.Linq;
 
 namespace Demo
 {
-   
+    class Employee
+    {
+        public int id;
+        public string? name;
+        public int age;
+        public void Fun01()
+        {
+            Console.WriteLine("hello from employee");
+        }
+
+        public virtual void Fun02()
+        {
+            Console.WriteLine($"id= {id} , name= {name} , age= {age}");
+        }
+    }
+
+    class FullTimeEmoloyee :Employee
+    {
+        public double salary;
+
+        public new void Fun01()
+        {
+            Console.WriteLine("hello from full time employee");
+        }
+
+        public override void Fun02()
+        {
+            Console.WriteLine($"id= {id} , name= {name} , age= {age} , salary= {salary}");
+        }
+
+    }
+
+    class PartTimeEmoloyee : Employee
+    {
+        public double HourRate;
+
+        public new void Fun01()
+        {
+            Console.WriteLine("hello from part time employee");
+        }
+
+        public override void Fun02()
+        {
+            Console.WriteLine($"id= {id} , name= {name} , age= {age} , Hour rate= {HourRate}");
+        }
+
+    }
+
+    
+
+
     internal class Program
     {
+        static void ProccessEmployee(Employee employee)
+        {
+            if (employee is not null) 
+            {
+                employee.Fun01();
+                employee.Fun02();
+            }
+        }
+
         static void Main(string[] args)
         {
 
@@ -129,18 +189,46 @@ namespace Demo
 
             #region Not binding
 
-          ///  OverrideParent parent = new OverrideChild ();   //binding
-          ///  OverrideChild child = new OverrideChild ();     // no binding
-          ///  child = (OverrideChild) parent; //casting operator override
-          ///  Console.WriteLine("***********Casting************");
-          ///  child.print();
-          ///  child.overriding();
-          ///  Console.WriteLine("***********binding************");
-          ///  parent.print();
-          ///  parent.overriding();
-              
+            ///  OverrideParent parent = new OverrideChild ();   //binding
+            ///  OverrideChild child = new OverrideChild ();     // no binding
+            ///  child = (OverrideChild) parent; //casting operator override
+            ///  Console.WriteLine("***********Casting************");
+            ///  child.print();
+            ///  child.overriding();
+            ///  Console.WriteLine("***********binding************");
+            ///  parent.print();
+            ///  parent.overriding();
+
 
             #endregion
+
+
+            #region Binding is a behaviour
+         ///   FullTimeEmoloyee full = new FullTimeEmoloyee()
+         ///   {
+         ///       id = 10,
+         ///       name = "ahmed",
+         ///       age = 23 ,
+         ///       salary = 20_000
+         ///   };
+         ///
+         ///   ProccessEmployee(full);
+         ///
+         ///   PartTimeEmoloyee part = new PartTimeEmoloyee()
+         ///   {
+         ///       id = 20,
+         ///       name = "hoda",
+         ///       age = 22,
+         ///       HourRate = 50
+         ///   };
+         ///
+         ///   Console.WriteLine("******************");
+         ///   ProccessEmployee(part);
+
+            #endregion
+
+
+
 
 
 
