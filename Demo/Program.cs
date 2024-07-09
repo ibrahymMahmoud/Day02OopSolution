@@ -80,11 +80,18 @@ namespace Demo
             Child child1 = new Child(5, 10);
             child1.Z = 20;
             child1.ToString();
-            child1.PrintX(); 
+            child1.PrintX();
             #endregion
 
 
+            #region PolyMorphism
+                /*
+                 * PolyMorphism (overloading , override)
+                 *   Poly->Many
+                 *   Morphism->forms
+                 */ 
 
+            #endregion
 
         }
     }
