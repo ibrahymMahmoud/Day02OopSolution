@@ -1,4 +1,5 @@
 ﻿using Demo.inheritance;
+using Demo.polymorphism_overriding;
 
 namespace Demo
 {
@@ -95,14 +96,19 @@ namespace Demo
             #endregion
 
             #region Overloading
-          ///  Overloading sum = new Overloading();
-          ///  Console.WriteLine(sum.sum(5, 10));
-          ///  Console.WriteLine(sum.sum(5, 10, 100));
-          ///  Console.WriteLine(sum.sum(1, 2, 3, 4));
-          ///  Console.WriteLine(sum.sum(5.5, 4.5));  
+            ///  Overloading sum = new Overloading();
+            ///  Console.WriteLine(sum.sum(5, 10));
+            ///  Console.WriteLine(sum.sum(5, 10, 100));
+            ///  Console.WriteLine(sum.sum(1, 2, 3, 4));
+            ///  Console.WriteLine(sum.sum(5.5, 4.5));  
             #endregion
 
 
+            #region override
+           ///  OverrideChild o1 = new OverrideChild();
+           ///  Console.WriteLine(o1.ToString()); 
+           ///  o1.print();
+            #endregion
 
 
         }
