@@ -5,10 +5,10 @@ using System.Xml.Linq;
 namespace Assignment
 {
         /*Part02 Q1*/
-    public enum Gender
+    public enum Gender 
     {
         Male =0 ,
-        female
+        female 
     }
 
     public enum SecurityLevel 
@@ -21,12 +21,12 @@ namespace Assignment
 
     class Employee
     {
-        private int Id;
-        private string Name;
-        private SecurityLevel SecurityLevel;
-        private Gender Gender;
-        private decimal salary;
-        private DateTime HireDate;
+        private int Id { get; set; }
+        private string? Name { get; set; }
+        private SecurityLevel SecurityLevel { get; set; }
+        private Gender Gender { get; set; }
+        private decimal salary { get; set; }
+        private DateTime HireDate { get; set; }
 
         public Employee( int Id , string Name , SecurityLevel SecurityLevel , Gender Gender , decimal Salary , DateTime HireDate )
         {
@@ -37,9 +37,13 @@ namespace Assignment
             this.salary = Salary;
             this.HireDate = HireDate;
         }
+
+
+
         public override string ToString()
         {
-            return $"Employee ID: {Id}, Name: {Name}, " +
+            return $"Employee ID: {Id}," +
+                   $"\nName: {Name}, " +
                    $"\nSecurity Level: {SecurityLevel}, " +
                    $"\nSalary: {salary.ToString("C" , new CultureInfo("en-US"))}," +
                    $"\nHire Date: {HireDate.ToShortDateString()}, " +
@@ -105,11 +109,22 @@ namespace Assignment
             #endregion
 
             #region Q2
-          ///  HireDate date = new HireDate(24, 12, 2001);
-          ///  Console.WriteLine(date); 
+            ///  HireDate date = new HireDate(24, 12, 2001);
+            ///  Console.WriteLine(date); 
             #endregion
 
+            #region Q3
 
-        }
+          ///  Employee[] Emps = new Employee[3];
+          ///  Emps[0] = new Employee (1 , "ahmed" , SecurityLevel.guest , 0 , 9000 , new DateTime(2025,10,3));
+          ///  Emps[1] = new Employee(2, "aya", SecurityLevel.DBA, Gender.female, 19000, new DateTime( 2020,2, 2));
+          ///  Emps[2] = new Employee(3, "hema", SecurityLevel.secretary, 0, 90000, new DateTime( 2024,12, 12));
+          ///
+          ///  for (int i = 0; i < Emps.Length; i++) 
+          ///      Console.WriteLine(Emps[i]);
+
+                #endregion
+
+            }
     }
 }
