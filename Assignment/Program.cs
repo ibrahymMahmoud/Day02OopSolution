@@ -26,7 +26,7 @@ namespace Assignment
         private SecurityLevel SecurityLevel { get; set; }
         private Gender Gender { get; set; }
         private decimal salary { get; set; }
-        private DateTime HireDate { get; set; }
+        public DateTime HireDate { get; set; }
 
         public Employee( int Id , string Name , SecurityLevel SecurityLevel , Gender Gender , decimal Salary , DateTime HireDate )
         {
@@ -115,16 +115,29 @@ namespace Assignment
 
             #region Q3
 
-          ///  Employee[] Emps = new Employee[3];
-          ///  Emps[0] = new Employee (1 , "ahmed" , SecurityLevel.guest , 0 , 9000 , new DateTime(2025,10,3));
-          ///  Emps[1] = new Employee(2, "aya", SecurityLevel.DBA, Gender.female, 19000, new DateTime( 2020,2, 2));
-          ///  Emps[2] = new Employee(3, "hema", SecurityLevel.secretary, 0, 90000, new DateTime( 2024,12, 12));
-          ///
-          ///  for (int i = 0; i < Emps.Length; i++) 
-          ///      Console.WriteLine(Emps[i]);
+            ///  Employee[] Emps = new Employee[3];
+            ///  Emps[0] = new Employee (1 , "ahmed" , SecurityLevel.guest , 0 , 9000 , new DateTime(2025,10,3));
+            ///  Emps[1] = new Employee(2, "aya", SecurityLevel.DBA, Gender.female, 19000, new DateTime( 2020,2, 2));
+            ///  Emps[2] = new Employee(3, "hema", SecurityLevel.secretary, 0, 90000, new DateTime( 2024,12, 12));
+            ///
+            ///  for (int i = 0; i < Emps.Length; i++) 
+            ///      Console.WriteLine(Emps[i]);
 
-                #endregion
+            #endregion
 
-            }
+            #region Q4
+            ///  Employee[] Emps = new Employee[3];
+            ///  Emps[0] = new Employee (1 , "ahmed" , SecurityLevel.guest , 0 , 9000 , new DateTime(2025,10,3));
+            ///  Emps[1] = new Employee(2, "aya", SecurityLevel.DBA, Gender.female, 19000, new DateTime( 2020,2, 2));
+            ///  Emps[2] = new Employee(3, "hema", SecurityLevel.secretary, 0, 90000, new DateTime( 2024,12, 12));
+            ///
+            /// 
+            ///
+            ///  for (int i = 0; i < Emps.Length; i++) 
+            ///      Console.WriteLine(Emps[i]);
+
+            #endregion
+
+        }
     }
 }
