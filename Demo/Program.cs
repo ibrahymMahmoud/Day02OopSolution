@@ -1,4 +1,5 @@
-﻿using Demo.inheritance;
+﻿using Demo.Binding;
+using Demo.inheritance;
 using Demo.polymorphism_overriding;
 using System.Xml.Linq;
 
@@ -204,30 +205,43 @@ namespace Demo
 
 
             #region Binding is a behaviour
-         ///   FullTimeEmoloyee full = new FullTimeEmoloyee()
-         ///   {
-         ///       id = 10,
-         ///       name = "ahmed",
-         ///       age = 23 ,
-         ///       salary = 20_000
-         ///   };
-         ///
-         ///   ProccessEmployee(full);
-         ///
-         ///   PartTimeEmoloyee part = new PartTimeEmoloyee()
-         ///   {
-         ///       id = 20,
-         ///       name = "hoda",
-         ///       age = 22,
-         ///       HourRate = 50
-         ///   };
-         ///
-         ///   Console.WriteLine("******************");
-         ///   ProccessEmployee(part);
+            ///   FullTimeEmoloyee full = new FullTimeEmoloyee()
+            ///   {
+            ///       id = 10,
+            ///       name = "ahmed",
+            ///       age = 23 ,
+            ///       salary = 20_000
+            ///   };
+            ///
+            ///   ProccessEmployee(full);
+            ///
+            ///   PartTimeEmoloyee part = new PartTimeEmoloyee()
+            ///   {
+            ///       id = 20,
+            ///       name = "hoda",
+            ///       age = 22,
+            ///       HourRate = 50
+            ///   };
+            ///
+            ///   Console.WriteLine("******************");
+            ///   ProccessEmployee(part);
 
             #endregion
 
-
+            #region binding
+           /// TypeA R1 = new TypeE(1,2,3,4,5);     
+           /// R1.Fun01(); //i'm base [parent]
+           /// R1.Fun02(); //TypC: A=  1 , B= 2 , C= 3
+           /// TypeB R2 = new TypeE(1, 2, 3, 4, 5);
+           /// R2.Fun01(); //i'm child [typeB]
+           /// R2.Fun02(); //TypC: A=  1 , B= 2 , C= 3
+           /// TypeC R3 = new TypeE(1, 2, 3, 4, 5);
+           /// R3.Fun01(); //i'm child [typeC]
+           /// R3.Fun02(); //TypC: A=  1 , B= 2 , C= 3
+           /// TypeD R4 = new TypeE(1, 2, 3, 4, 5);
+           /// R4.Fun01(); //i'm child [typeD]
+           /// R4.Fun02(); //TypE: A=  1 , B= 2 , C= 3 , D= 4 , E= 5
+            #endregion
 
 
 
